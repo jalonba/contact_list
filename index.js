@@ -29,3 +29,4 @@ mostrarContactos(mis_contactos);
 
 eliminarContacto(3);
 mostrarContactos(mis_contactos);
+console.log("Ejercicio resuelto");
