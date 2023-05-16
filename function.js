@@ -1,18 +1,16 @@
 const { Contacto } = require("./types.js");
-const contacto_1 = new Contacto(0, "Juan", "Perez", 31418597485, {
-  city: "Villavicencio",
-  direccion: "Cll 21 15 42",
-});
-const contacto_2 = new Contacto(1, "Carlos", "Jerez", 3207854198, {
-  city: "Cartagena",
-  direccion: "Cll 52 85 96",
-});
-const contacto_3 = new Contacto(2, "Jairo", "Baquero", 3118579647, {
-  city: "Medellin",
-  direccion: "Cll 5 14 06",
-});
+const crearContacto = (id, nombre, apellido, telefono, ubicacion) => {
+  const { city, direccion } = ubicacion;
+  const nuevoContacto = new Contacto(id, nombre, apellido, telefono, {
+    city: city,
+    direccion: direccion,
+  });
 
-let mis_contactos = [contacto_1, contacto_2, contacto_3];
+  mis_contactos.push(nuevoContacto);
+  console.log("Contacto creado correctamente");
+};
+
+let mis_contactos = [];
 
 const mostrarContactos = (contactos) => {
   console.log("Información mostrada correctamente");
